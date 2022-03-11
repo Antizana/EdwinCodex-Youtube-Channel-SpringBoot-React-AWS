@@ -6,6 +6,8 @@ target/
 
 src/main/java/com/edwincodex/awsimageupload/config/AmazonConfig.java
 
+src/docs/
+
 ### STS ###
 .apt_generated
 .classpath
