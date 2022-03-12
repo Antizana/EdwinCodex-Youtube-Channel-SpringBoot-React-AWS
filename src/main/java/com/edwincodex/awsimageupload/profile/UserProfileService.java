@@ -10,16 +10,18 @@ import java.util.UUID;
 @Service
 public class UserProfileService {
 
+    private final UserProfileDataAccessService userProfileDataAccessService;
+
     @Autowired
     public UserProfileService(UserProfileDataAccessService userProfileDataAccessService) {
         this.userProfileDataAccessService = userProfileDataAccessService;
     }
 
     List<UserProfile> getUserProfiles(){
+
         return userProfileDataAccessService.getUserProfiles();
     }
 
-    private final UserProfileDataAccessService userProfileDataAccessService;
 
     public void uploadUserProfileImage(UUID userProfileId, MultipartFile file) {
         // 1. Check if image is not empty
